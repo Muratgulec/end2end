@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 
         features="src/test/resources/endtoend_features",
         glue= {"stepdefinitions","hooks"},
-        tags= "@api",//Çalışacak scenarioları belirtir.
+        tags= "@e2e",//Çalışacak scenarioları belirtir.
         dryRun= false
 )
 

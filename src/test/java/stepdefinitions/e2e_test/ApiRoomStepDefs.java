@@ -1,4 +1,4 @@
-package stepdefinitions;
+package stepdefinitions.e2e_test;
 
 import io.cucumber.core.internal.com.fasterxml.jackson.core.JsonProcessingException;
 import io.cucumber.core.internal.com.fasterxml.jackson.databind.ObjectMapper;
@@ -9,8 +9,8 @@ import pojos.RoomPojo;
 import static base_urls.MedunnaBaseUrl.spec;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
-import static stepdefinitions.MedunnaRoomStepDefs.roomId;
-import static stepdefinitions.MedunnaRoomStepDefs.roomNumberFaker;
+import static stepdefinitions.e2e_test.MedunnaRoomStepDefs.roomId;
+import static stepdefinitions.e2e_test.MedunnaRoomStepDefs.roomNumberFaker;
 
 public class ApiRoomStepDefs {
 
@@ -62,7 +62,7 @@ public class ApiRoomStepDefs {
 
         //Send the request and get the response
         response = given(spec).get("{first}/{second}/{third}");
-        //response.prettyPrint();
+        response.prettyPrint();
 
     }
 
